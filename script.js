@@ -14,3 +14,15 @@ links.forEach(link => {
     });
   });
 });
+
+var gallery = document.querySelector('.image-gallery');
+var pauseButton = document.querySelector('.image-gallery button:nth-child(1)');
+var playButton = document.querySelector('.image-gallery button:nth-child(2)');
+
+pauseButton.addEventListener('click', function() {
+  gallery.classList.add('paused');
+});
+
+playButton.addEventListener('click', function() {
+  gallery.classList.remove('paused');
+});
